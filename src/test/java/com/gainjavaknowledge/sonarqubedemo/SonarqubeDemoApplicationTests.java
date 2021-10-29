@@ -11,19 +11,15 @@ import com.gainjavaknowledge.sonarqubedemo.controller.MessageController;
 class SonarqubeDemoApplicationTests {
 
 	@Autowired
-	private MessageController messageController;
-
+	private MessageController controller;
+	
 	@Test
 	void contextLoads() {
-		String input = "abc";
-		Assertions.assertNotNull(input);
 	}
 
 	@Test
 	void testGetMessage() {
-		String input = "abc";
-		String message = messageController.getMessage(input);
+		String message = controller.getMessage();
 		Assertions.assertNotNull(message);
 	}
-
 }
